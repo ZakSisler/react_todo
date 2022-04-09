@@ -3,12 +3,8 @@ import React from "react";
 export default function SingleToDo(props) {
   return (
     <div className="singletodo col-md-5 m-4">
-      <h3>{props.todo.Name}</h3>
-      {props.todo.Description !== null ? (
-        <p>{props.todo.Description}</p>
-      ) : (
-        <p>No Description Provided</p>
-      )}
+      <h3>{props.todo.Action}</h3>
+      {props.todo.Done ? <p>Complete</p> : <p>In progress</p>}
       <a
         href={props.todo.Url}
         target="_blank"
